@@ -1,3 +1,6 @@
+---
+---
+
 @import 'vars';
 @import 'mixins';
 
@@ -12,7 +15,7 @@
 	hr {
 		border-top: solid 1px $color-border-ie;
 	}
-	
+
 	blockquote {
 		border-left: solid 0.5em $color-border-ie;
 	}
@@ -22,7 +25,7 @@
 	header {
 		&.major {
 			border-color: $color-border-ie;
-			
+
 			p {
 				border-top: solid 1px $color-border-ie;
 			}
@@ -60,14 +63,14 @@
 		border: solid 1px $color-border-ie;
 		-ms-behavior: url('css/ie/PIE.htc');
 	}
-	
+
 /* Image */
 
 	.image {
 		border: 0;
 		display: inline-block;
 		position: relative;
-		
+
 		&:after {
 			display: none;
 		}
@@ -88,11 +91,11 @@
 		-ms-behavior: url('css/ie/backgroundsize.min.htc');
 		padding: 8em 0 !important;
 		color: $color-accent2-fg-bold;
-		
+
 		a {
 			color: inherit;
 		}
-		
+
 		&:before {
 			content: '';
 			background-image: url('../images/overlay.png');
@@ -104,17 +107,17 @@
 			display: block;
 			z-index: 0;
 		}
-		
+
 		> * {
 			position: relative;
 			z-index: 1;
 		}
-		
+
 		.logo {
 			-ms-behavior: url('css/ie/PIE.htc');
 		}
 	}
-	
+
 /* Footer */
 
 	#footer {
@@ -123,7 +126,7 @@
 		padding: 4em 0 !important;
 		color: $color-accent-fg-bold;
 	}
-	
+
 /* Main */
 
 	#main {

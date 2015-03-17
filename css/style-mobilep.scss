@@ -1,3 +1,6 @@
+---
+---
+
 @import 'vars';
 @import 'mixins';
 
@@ -22,7 +25,7 @@
 			padding-right: 1em;
 		}
 	}
-	
+
 /* List */
 
 	ul {
@@ -31,12 +34,12 @@
 				padding: 0.2em;
 			}
 		}
-			
+
 		&.actions {
 			li {
 				display: block;
 				padding: 15px 0 0 0;
-		
+
 				&:first-child {
 					padding: 0;
 				}
@@ -52,7 +55,7 @@
 	.button {
 		display: block;
 		width: 100%;
-	}	
+	}
 
 /* Box */
 
@@ -83,7 +86,7 @@
 		margin-top: -100px;
 		padding-left: 1em;
 		padding-right: 1em;
-		
+
 		.copyright {
 			li {
 				border: 0;
@@ -99,7 +102,7 @@
 	#header {
 		padding-left: 2em;
 		padding-right: 2em;
-		
+
 		br {
 			display: none;
 		}
