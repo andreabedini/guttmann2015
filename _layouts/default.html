@@ -11,13 +11,13 @@
 {% if site.description %}<meta name="description" content="{{ site.description }}" />{% endif %}
 {% if site.keywords %}<meta name="keywords" content="{{ site.keywords }}" />{% endif %}
 <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-<script src="js/jquery.min.js"></script>
-<script src="js/skel.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/skel/2.2.1/skel.min.js"></script>
 <script src="js/init.js"></script>
 <noscript>
-	<link rel="stylesheet" href="css/skel.css" />
-	<link rel="stylesheet" href="css/style.css" />
-	<link rel="stylesheet" href="css/style-wide.css" />
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/skel/2.2.1/skel.min.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css/style-wide.css"/>
 </noscript>
 <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 </head>
@@ -25,25 +25,7 @@
 {% include _header.html %}
 <!-- Main -->
 <div id="main">
-	<header class="major container 75%">
-		<h2>We conduct experiments that
-			<br />
-			may or may not seriously
-			<br />
-			break the universe</h2>
-		<p>Tellus erat mauris ipsum fermentum<br />
-		etiam vivamus nunc nibh morbi.</p>
-	</header>
-
 	{{ content }}
-
-	<footer class="major container 75%">
-		<h3>Get shady with science</h3>
-		<p>Vitae natoque dictum etiam semper magnis enim feugiat amet curabitur tempor orci penatibus. Tellus erat mauris ipsum fermentum etiam vivamus.</p>
-		<ul class="actions">
-			<li><a href="#" class="button">Join our crew</a></li>
-		</ul>
-	</footer>
 </div>
 {% include _footer.html %}
 </body>

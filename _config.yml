@@ -1,4 +1,7 @@
-title: Tony Guttmann 70th Birthday Conference
+title: Guttmann 2015 - 70 and counting
 exclude:
   - README.txt
   - LICENSE.txt
+
+sass:
+  style: :compressed
