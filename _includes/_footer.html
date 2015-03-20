@@ -4,7 +4,7 @@
 		<header class="major last">
 			<h2>Questions?</h2>
 		</header>
-		<form accept-charset="UTF-8" action="https://formkeep.com/f/b39c3f8d3696" method="POST">
+		<form>
 			<input type="hidden" name="utf8" value="✓">
 			<div class="row">
 				<div class="6u 12u(mobilep)">
@@ -27,6 +27,24 @@
 				</div>
 			</div>
 		</form>
+		<script>
+			$('form').on('submit', function(event) {
+				event.preventDefault();
+				$.ajax({
+					type: 'POST',
+					url: 'https://zapier.com/hooks/catch/byfwx1/',
+					data: $(this).serialize(),
+					success: function() {
+						$('#footer h2').text('Got it!').addClass('animated tada');
+					},
+					error: function() {
+						$('#footer h2').text('Ouch!').addClass('animated shake');
+						var msg = '<p>Sorry, that didn\'t work as expected, just drop me an email at <a href=\'mailto:abedini@ms.unimelb.edu.au\'>abedini@ms.unimelb.edu.au</a>, ok?</p>';
+						$(msg).insertAfter('#footer h2');
+					}
+				});
+			});
+		</script>
 		<ul class="copyright">
 			<li>&copy; <a href="http://www.andreabedini.com">Andrea Bedini</a>. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 		</ul>
