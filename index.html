@@ -11,22 +11,9 @@ layout: default
     <section>
         <header><h3>Confirmed speakers</h3></header>
         <p style="text-align: center;">
-        <a href="#">Michael Assis</a><br>
-        <a href="http://physics.anu.edu.au/theophys/people/profile.php?ID=316">Murray Batchelor</a><br>
-        <a href="http://www.andreabedini.com">Andrea Bedini</a><br>
-        <a href="http://www.carma.newcastle.edu.au/jon/">Jon Borwein</a><br>
-        <a href="http://www.labri.fr/perso/bousquet/">Mireille Bousquet-Melou</a><br>
-        <a href="http://www.ms.unimelb.edu.au/Personnel/profile.php?PC_id=12">Richard Brak</a><br>
-        <a href="http://maths-people.anu.edu.au/~brent/">Richard Brent</a><br>
-        <a href="http://clisby.net/">Nathan Clisby</a><br>
-        <a href="http://www.ms.unimelb.edu.au/~degier/">Jan de Gier</a><br>
-        <a href="http://users.monash.edu.au/~garonit/">Tim Garoni</a><br>
-        <a href="http://www.phys.ens.fr/~jacobsen/">Jesper Jacobson</a><br>
-        <a href="http://www.mat.univie.ac.at/~kratt/">Christian Krattenthaler</a><br>
-        <a href="#">Jean-Marie Maillard</a><br>
-        <a href="http://www.newcastle.edu.au/profile/judy-anne-osborn">Judy-anne Osborn</a><br>
-        <a href="http://www.ms.unimelb.edu.au/~aleks/">Aleks Owczarek</a><br>
-        <a href="http://www.maths.uq.edu.au/~uqowarna/">Ole Warnaar</a>
+        {% for speaker in site.data.speakers | sort: 'name' %}
+        <a href="{% if speaker.url %}{{ speaker.url }}{% else %}#{% endif %}">{{ speaker.name }}</a><br>
+        {% endfor %}
         </p>
     </section>
     <section>
