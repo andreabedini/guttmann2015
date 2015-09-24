@@ -902,3 +902,21 @@
 			background: $color-bg;
 		}
 	}
+
+        .my-button {
+            border-radius: 4px;
+            border: 0;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 1em;
+            font-weight: 700;
+            letter-spacing: 0.125em;
+            line-height: 3.25em;
+            min-width: 15em;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            background: #4eb980;
+            color: white;
+            margin: 1em;
+        }
