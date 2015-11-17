@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<div class="box container">
+    <section>
+        <header><h3>Partecipants</h3></header>
+        <div class="table-wrapper">
+            <table class="default">
+                <tbody>
+                    {% for participant in site.data.participants | sort: 'LastName' %}
+                    <tr>
+                        <td width="33%">
+                            {{ participant.FirstName }} {{ participant.LastName }}
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="collapse" data-target="abstract-{{forloop.index}}">{{ participant.Title }}</a> 
+                        </td>
+                    </tr>
+                    <tr id="abstract-{{forloop.index}}" style="display: none;">
+                        <td colspan="2">
+                        {% if participant.Abstract != "" %}
+                        <p>{{ participant.Abstract }}</p>
+                        {% else %}
+                        <p>To be announced</p>
+                        {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>
+<script>
+$("a[data-toggle]").click(function(e) {
+    e.preventDefault();
+    var target = document.getElementById(this.dataset['target']);
+    $(target).toggle();
+});
+</script>
+
