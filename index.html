@@ -29,13 +29,41 @@ layout: default
 
 <div class="box container">
     <section>
-        <header><h3>Confirmed participants</h3></header>
-        <p style="text-align: center;">
-        {% for speaker in site.data.participants %}
-        <a href="{% if speaker.url %}{{ speaker.url }}{% else %}#{% endif %}">{{ speaker.FirstName }} {{ speaker.LastName }}</a><br>
-        {% endfor %}
-        </p>
+        <header><h3>Participants</h3></header>
+        <div class="table-wrapper">
+            <table class="default">
+                <tbody>
+                    {% for participant in site.data.participants | sort: 'LastName' %}
+                    <tr>
+                        <td width="33%">
+                            {{ participant.FirstName }} {{ participant.LastName }}
+                        </td>
+                        <td>
+                            <a href="#" data-toggle="collapse" data-target="abstract-{{forloop.index}}">{{ participant.Title }}</a> 
+                        </td>
+                    </tr>
+                    <tr id="abstract-{{forloop.index}}" style="display: none;">
+                        <td colspan="2">
+                            <p>
+                            <em>{% if participant.Abstract != "" %}{{ participant.Abstract }}{% else %}To be announced{% endif %}</em>
+                            </p>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
     </section>
+    <script>
+    $("a[data-toggle]").click(function(e) {
+        e.preventDefault();
+        var target = document.getElementById(this.dataset['target']);
+        $(target).toggle();
+    });
+    </script>
+</div>
+
+<div class="box container">
     <section>
         <header><h3>Organising committee</h3></header>
         <p style="text-align: center;">
