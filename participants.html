@@ -19,11 +19,9 @@ layout: default
                     </tr>
                     <tr id="abstract-{{forloop.index}}" style="display: none;">
                         <td colspan="2">
-                        {% if participant.Abstract != "" %}
-                        <p>{{ participant.Abstract }}</p>
-                        {% else %}
-                        <p>To be announced</p>
-                        {% endif %}
+                            <p>
+                            <em>{% if participant.Abstract != "" %}{{ participant.Abstract }}{% else %}To be announced{% endif %}</em>
+                            </p>
                         </td>
                     </tr>
                     {% endfor %}

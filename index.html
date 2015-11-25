@@ -29,10 +29,10 @@ layout: default
 
 <div class="box container">
     <section>
-        <header><h3>Confirmed speakers</h3></header>
+        <header><h3>Confirmed participants</h3></header>
         <p style="text-align: center;">
-        {% for speaker in site.data.speakers | sort: 'name' %}
-        <a href="{% if speaker.url %}{{ speaker.url }}{% else %}#{% endif %}">{{ speaker.name }}</a><br>
+        {% for speaker in site.data.participants %}
+        <a href="{% if speaker.url %}{{ speaker.url }}{% else %}#{% endif %}">{{ speaker.FirstName }} {{ speaker.LastName }}</a><br>
         {% endfor %}
         </p>
     </section>
