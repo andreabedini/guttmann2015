@@ -920,3 +920,15 @@
             color: white;
             margin: 1em;
         }
+
+.programme {
+    text-align: left;
+    vertical-align: top;
+    display: flex;
+    table {
+        width: 50%;
+        td {
+            padding: 0.5em;
+        }
+    }
+}
