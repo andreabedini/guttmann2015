@@ -27,6 +27,10 @@ layout: default
     </section>
 </div>
 
+<header class="major container 75%">
+    <a class="my-button" href="programme.html">Programme</a>
+</header>
+
 <div class="box container">
     <section>
         <header><h3>Participants</h3></header>
@@ -39,16 +43,16 @@ layout: default
                             {{ participant.FirstName }} {{ participant.LastName }}
                         </td>
                         <td>
-                            <a href="#" data-toggle="collapse" data-target="abstract-{{forloop.index}}">{{ participant.Title }}</a> 
+                            {% if participant.Abstract != "" %}<a href="#" data-toggle="collapse" data-target="abstract-{{forloop.index}}">{% endif %}{{ participant.Title }}{% if participant.Abstract %}</a>{% endif %}
                         </td>
                     </tr>
+                    {% if participant.Abstract != "" %}
                     <tr id="abstract-{{forloop.index}}" style="display: none;">
                         <td colspan="2">
-                            <p>
-                            <em>{% if participant.Abstract != "" %}{{ participant.Abstract }}{% else %}To be announced{% endif %}</em>
-                            </p>
+                            <p><em>{{ participant.Abstract }}</em></p>
                         </td>
                     </tr>
+                    {% endif %}
                     {% endfor %}
                 </tbody>
             </table>
@@ -62,10 +66,6 @@ layout: default
     });
     </script>
 </div>
-
-<header class="major container 75%">
-    <a class="my-button" href="programme.html">Conference programme</a>
-</header>
 
 <div class="box container">
     <section>
